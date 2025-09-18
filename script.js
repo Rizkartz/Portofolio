@@ -1,4 +1,4 @@
-// Sticky Header
+
 window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
     if (window.scrollY > 50) {
@@ -8,7 +8,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -19,7 +18,6 @@ hamburger.addEventListener('click', function() {
         : '<i class="fas fa-bars"></i>';
 });
 
-// Close mobile nav when clicking on a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -27,7 +25,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Smooth scrolling for navigation links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -45,7 +43,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission
+
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -55,7 +53,7 @@ if (contactForm) {
     });
 }
 
-// Back to top button
+
 const backToTopButton = document.getElementById('back-to-top');
 
 window.addEventListener('scroll', () => {
@@ -73,7 +71,7 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
-// Progress bar animation
+
 function animateProgressBars() {
     const progressBars = document.querySelectorAll('.progress-bar');
     
@@ -83,7 +81,7 @@ function animateProgressBars() {
     });
 }
 
-// Animasi saat scroll
+
 function checkScroll() {
     const elements = document.querySelectorAll('.fade-in');
     
@@ -94,7 +92,7 @@ function checkScroll() {
         if (elementPosition < screenPosition) {
             element.classList.add('visible');
             
-            // Animate progress bars when skills section is in view
+           
             if (element.closest('#skills')) {
                 setTimeout(animateProgressBars, 300);
             }
@@ -105,7 +103,7 @@ function checkScroll() {
 window.addEventListener('scroll', checkScroll);
 window.addEventListener('load', checkScroll);
 
-// Project card hover animation
+
 const projectCards = document.querySelectorAll('.project-card');
 
 projectCards.forEach(card => {
@@ -119,3 +117,4 @@ projectCards.forEach(card => {
         card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
     });
 });
+
